@@ -1,0 +1,68 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common */
+body {
+    background-color: black;
+}
+
+img {
+    width: 100%;
+}
+
+/* container */
+.container {
+    max-width: 990px;    
+    margin: auto;
+    position: relative;
+}
+
+/* slider */
+.slider {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+.arrow.left {
+    padding-right: 30px;
+}
+
+.arrow.right {
+    padding-left: 30px;
+}
+
+
+.images img {
+    display: none;
+}
+
+.images img.active {
+    display: block;
+}
+
+/* circle */
+.circle-container {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba( 0, 0 , 0, 0.5);
+    padding: 20px;
+    border-radius: 999px;
+}
+
+.circle-container i {
+    padding: 0 10px;
+}
