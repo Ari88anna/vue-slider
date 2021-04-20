@@ -34,12 +34,29 @@ var app = new Vue(
                     //allora l'immagine attiva sarà quella con indice 0, così ricomincia dall'inizio
                     this.currentImg = 0;
 
-                //se non ci troviamo alla fine dell'array e c'è ancora un'immagine seguente
+                    //se non ci troviamo alla fine dell'array e c'è ancora un'immagine seguente
                 } else  {
                     //l'immagine attiva sarà l'immagine seguente(followingImg)
                     this.currentImg = followingImg;
                 }
             },
+
+            prevImg() {
+                //salviamo l'immagine precedente in una costante che sarà uguale all'immagine attiva - 1 
+                const prevImgIndex = this.currentImg - 1;
+                // Se ci troviamo all'inizio' dell'array 
+                //Ovvero se  la precedente immagine ha indice < 0
+                if (prevImgIndex <  0) {
+
+                    //allora l'immagine attiva sarà uguale alla lunghezza dell'array - 1 (l'ultima immagine) 
+                    this.currentImg = this.sliderImg.length - 1;
+
+                    //se non ci troviamo all'inizio' dell'array e c'è ancora un'immagine precedente
+                } else  {
+                    //l'immagine attiva sarà l'immagine precedente(prevImgIndex)
+                    this.currentImg = prevImgIndex;
+                }
+            }
         },
 
     }
