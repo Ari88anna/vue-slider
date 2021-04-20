@@ -11,13 +11,24 @@ var app = new Vue(
         el: '#root',
     
         data: {
+            //Indice img attiva in questo momenti
+            currentImg: 0,
+            //array di immgini da inserire nello slider
+            sliderImg: [
+                'img/campagna.jpg',
+                'img/cascate.webp',
+                'img/fiori.jpeg',
+                'img/montagne.webp',                
+            ]
+            
 
 
         },
+        
         methods: {
 
         }
 
     }
-
+    
 )

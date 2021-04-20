@@ -27,10 +27,8 @@
             
                 <div class="images">
 
-                    <img class="first active" src="img/campagna.jpg" alt="">
-                    <img src="img/cascate.webp" alt="">
-                    <img src="img/fiori.jpeg" alt="">
-                    <img class="last"src="img/montagne.webp" alt="">
+                    <img :src="sliderImg[currentImg]" alt="">
+                    
 
                 </div>
 
@@ -46,10 +44,8 @@
 
             <!-- circle container -->
             <div class="circle-container">
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+
+                <i v-for='image in sliderImg' class="fas fa-circle"></i>                
 
             </div>
             <!-- end circle container -->

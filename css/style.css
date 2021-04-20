@@ -22,7 +22,7 @@ img {
     position: relative;
 }
 
-/* slider */
+/* slider- container */
 .slider {
     padding: 20px 0;
     display: flex;
@@ -44,15 +44,8 @@ img {
 }
 
 
-.images img {
-    display: none;
-}
 
-.images img.active {
-    display: block;
-}
-
-/* circle */
+/* circle- container */
 .circle-container {
     position: absolute;
     bottom: 50px;
@@ -61,6 +54,10 @@ img {
     background-color: rgba( 0, 0 , 0, 0.5);
     padding: 20px;
     border-radius: 999px;
+}
+
+.circle-container.active {
+    color: blue;
 }
 
 .circle-container i {
