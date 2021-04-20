@@ -33,7 +33,7 @@
                 </div>
 
 
-                <div class="arrow right">
+                <div class="arrow right" @click="nextImg">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             
@@ -45,7 +45,13 @@
             <!-- circle container -->
             <div class="circle-container">
 
-                <i v-for='image in sliderImg' class="fas fa-circle"></i>                
+                <!-- per stampare a schermo i fa-circle si utilizza v-for; si aggiunge nel tag ;
+                stampa un cerchio per ogni immagine nello sliderImg. Si aggiunge la classe active quando l'indice è uguale all'indice dell'immagine corrente-->
+
+                <span v-for="(image, index) in sliderImg" :class="{'active': index == currentImg}" >
+                    <i class="fas fa-circle"></i>
+                </span>
+                                
 
             </div>
             <!-- end circle container -->

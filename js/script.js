@@ -19,15 +19,28 @@ var app = new Vue(
                 'img/cascate.webp',
                 'img/fiori.jpeg',
                 'img/montagne.webp',                
-            ]
-            
-
-
+            ],
         },
         
         methods: {
+            nextImg() {
+                //salviamo l'immagine seguente in una costante che sarà uguale all'immagine attiva + 1
+                const followingImg = this.currentImg + 1;
 
-        }
+                // Se ci troviamo alla fine dell'array 
+                //Ovvero se (l'indice) la prossima immagine è maggiore della lunghezza dell'array delle immagini -1
+                if (followingImg > this.sliderImg.length - 1) {
+
+                    //allora l'immagine attiva sarà quella con indice 0, così ricomincia dall'inizio
+                    this.currentImg = 0;
+
+                //se non ci troviamo alla fine dell'array e c'è ancora un'immagine seguente
+                } else  {
+                    //l'immagine attiva sarà l'immagine seguente(followingImg)
+                    this.currentImg = followingImg;
+                }
+            },
+        },
 
     }
     
