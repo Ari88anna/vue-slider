@@ -56,8 +56,15 @@ var app = new Vue(
                     //l'immagine attiva sarà l'immagine precedente(prevImgIndex)
                     this.currentImg = prevImgIndex;
                 }
-            }
+            },
+            
         },
+
+        created() {
+            
+            setInterval(this.nextImg, 3000);
+            
+        }
 
     }
     
